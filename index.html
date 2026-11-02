@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d0b33">
+<title>Para mi Niña Hermosa ❤️</title>
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#1d0b33;--rose:#ff7a9c;--amber:#ffb86b;--gold:#ffd66b;--cream:#fff1dc;--card:rgba(34,10,44,.62);--line:rgba(255,200,140,.28);--ease:cubic-bezier(.22,.8,.24,1)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--plum)}
+body{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif;font-weight:500;font-size:1.2rem;line-height:1.4;color:var(--cream);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-synthesis:none;font-variant-numeric:lining-nums tabular-nums}
+.script{font-family:'Great Vibes','Snell Roundhand','Apple Chancery',cursive;font-weight:400}
+h1,h2{text-wrap:balance}
+#bg{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:0;pointer-events:none}
+main{position:relative;z-index:2}
+section{width:100%;max-width:960px;margin:0 auto;padding:0 1.25rem}
+
+/* texto que se escribe */
+.off{opacity:0}
+.typing .on::after{content:'';display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-.12em;background:var(--gold);animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* aparición al deslizar */
+.js .reveal{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* portada */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:4rem 0 6rem}
+.hero h1{font-size:clamp(2.6rem,10vw,6rem);line-height:1.12;text-shadow:0 2px 24px rgba(229,89,58,.55),0 0 2px rgba(0,0,0,.5)}
+.heart{display:inline-block;width:.62em;height:.62em;color:var(--rose);opacity:0;transform:scale(.4);transition:opacity 1s,transform 1s var(--ease)}
+.heart.show{opacity:1;transform:none;animation:beat 1.6s ease-in-out 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.hero p{max-width:34rem;font-size:clamp(1.12rem,4vw,1.5rem);line-height:1.55;font-style:italic;text-shadow:0 1px 12px rgba(0,0,0,.6);text-wrap:pretty}
+.scroll-hint{position:absolute;bottom:calc(1.75rem + env(safe-area-inset-bottom));font-size:.95rem;color:var(--gold);opacity:0;transition:opacity 1.5s}
+.scroll-hint.show{opacity:.9;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+
+/* tarjetas */
+.card{background:var(--card);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:1.5rem;box-shadow:0 10px 40px rgba(10,0,20,.45)}
+.counters{display:grid;gap:1.5rem;grid-template-columns:1fr;padding-bottom:6rem}
+@media(min-width:768px){.counters{grid-template-columns:1fr 1fr}}
+.counter{padding:2rem 1.5rem;text-align:center}
+.counter h2{font-size:1.9rem;font-weight:600;line-height:1.2;color:var(--gold);margin-bottom:1.5rem}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+.num{background:rgba(255,184,107,.10);border:1px solid var(--line);border-radius:1rem;padding:.7rem 0;font-size:clamp(1.6rem,6vw,2.4rem);font-weight:600;line-height:1.2}
+.in .num{animation:pop .9s var(--ease) both}
+.small .num{font-size:clamp(1.3rem,4.5vw,1.7rem);padding:.5rem 0}
+.lab{display:block;margin-top:.4rem;font-size:.85rem;letter-spacing:.06em;color:var(--amber)}
+.months{display:inline-block;min-width:9rem;margin-bottom:1.25rem;padding:.6rem 2rem}
+.small .months b{font-size:3.2rem;line-height:1;display:block}
+.nextlabel{font-size:1rem;margin-bottom:.6rem;font-style:italic;opacity:.9}
+@keyframes pop{0%{transform:scale(.5);opacity:0}60%{transform:scale(1.06);opacity:1}100%{transform:scale(1);opacity:1}}
+
+/* galería */
+.gallery{text-align:center;padding-bottom:6rem}
+.gallery h2{font-size:clamp(2.6rem,10vw,4rem);text-shadow:0 2px 20px rgba(229,89,58,.5);margin-bottom:2rem;min-height:1.2em}
+.frame{position:relative;width:min(86vw,420px);margin:0 auto;padding:14px 14px 56px;background:rgba(255,241,220,.92);border-radius:6px;transform:rotate(-2deg);box-shadow:0 24px 50px rgba(10,0,20,.6);transition:transform .6s var(--ease);touch-action:pan-y;-webkit-user-select:none;user-select:none;overflow:visible}
+.frame::before{content:'';position:absolute;top:-14px;left:50%;width:84px;height:26px;transform:translateX(-50%) rotate(2deg);background:rgba(255,184,107,.55);border:1px solid rgba(255,255,255,.35);z-index:1}
+.frame .ph{overflow:hidden;background:#2a1030}
+.frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;transition:opacity .4s ease,transform .4s var(--ease);-webkit-touch-callout:none;-webkit-user-drag:none;will-change:transform,opacity}
+.frame .count{position:absolute;bottom:16px;left:0;right:0;color:#4a1555;font-size:1.15rem;font-style:italic}
+.controls{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:2.25rem}
+.controls button{flex:0 0 3rem;width:3rem;height:3rem;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--gold);font:inherit;font-size:1.5rem;line-height:1;cursor:pointer;touch-action:manipulation;transition:transform .2s,background .2s}
+.controls button:active{transform:scale(.88);background:rgba(229,89,58,.45)}
+.dots{display:flex;flex-wrap:wrap;justify-content:center;max-width:calc(100vw - 9.5rem)}
+.dots i{width:1.15rem;height:2.75rem;display:grid;place-items:center;cursor:pointer;touch-action:manipulation}
+.dots i::before{content:'';width:.5rem;height:.5rem;border-radius:50%;background:rgba(255,241,220,.32);transition:all .3s}
+.dots i.on::before{background:var(--gold);transform:scale(1.45)}
+@media(hover:hover){.frame:hover{transform:rotate(0)}.controls button:hover{transform:scale(1.12);background:rgba(229,89,58,.45)}}
+
+.closing{text-align:center;padding:3rem 1.5rem;margin-bottom:8rem}
+.closing p{font-size:clamp(2.1rem,8vw,3.6rem);text-shadow:0 2px 20px rgba(229,89,58,.5)}
+.closing .letter{max-width:42rem;margin:1.75rem auto 0;text-align:left;font-size:clamp(1.05rem,3.5vw,1.3rem);line-height:1.75}
+.closing .letter p{font-size:inherit;text-shadow:none}
+.closing .letter p+p{margin-top:1rem}
+
+/* música */
+#music{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--cream);font:600 1rem 'Cormorant Garamond',Georgia,serif;cursor:pointer;touch-action:manipulation;transition:transform .2s}
+#music:active{transform:scale(.94)}
+#music.wait{animation:glow 2.2s ease-in-out infinite}
+#music svg{width:1.15rem;height:1.15rem;fill:currentColor}
+@keyframes glow{50%{box-shadow:0 0 0 8px rgba(255,214,107,.18)}}
+
+@media(max-width:480px){
+  body{font-size:1.12rem}
+  section{padding-inline:1rem}
+  .card,#music{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .counters{gap:1rem;padding-bottom:4rem}
+  .counter{padding:1.4rem .85rem}
+  .counter h2{font-size:clamp(1.45rem,6.6vw,1.8rem);margin-bottom:1rem}
+  .grid4{gap:.3rem}
+  .num{padding:.55rem 0;font-size:clamp(1.1rem,6vw,1.5rem);border-radius:.75rem}
+  .small .num{font-size:clamp(1rem,5vw,1.25rem)}
+  .lab{font-size:.72rem;letter-spacing:.02em}
+  .months{min-width:0;padding:.5rem 1.5rem}
+  .small .months b{font-size:2.7rem}
+  .gallery{padding-bottom:4rem}
+  .frame{width:100%;padding:10px 10px 46px;transform:none}
+  .frame .count{bottom:11px}
+  .closing{padding:2rem .75rem;margin-bottom:5rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<audio id="song" loop preload="auto" playsinline><source src="./my_kind_of_woman.mp3" type="audio/mpeg"></audio>
+<button id="music" class="wait" aria-label="Música"><span id="mi"></span><span id="mt">Dale play</span></button>
+
+<main>
+  <section class="hero">
+    <h1 class="script"><span data-type data-speed="70">Para el amor de mi vida</span> <svg class="heart" id="hh" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></h1>
+    <p data-type data-speed="38">Cada segundo a tu lado es un regalo. Hice esta página solo para nosotros para recordar siempre lo nuestro, te amo.</p>
+    <span class="scroll-hint" id="hint">desliza hacia abajo ↓</span>
+  </section>
+
+  <section class="counters">
+    <div class="card counter reveal">
+      <h2 data-type data-scroll>Nos conocemos desde</h2>
+      <div class="grid4">
+        <div><div class="num" id="met-d">0</div><span class="lab">Días</span></div>
+        <div><div class="num" id="met-h" style="animation-delay:.1s">0</div><span class="lab">Horas</span></div>
+        <div><div class="num" id="met-m" style="animation-delay:.2s">0</div><span class="lab">Min</span></div>
+        <div><div class="num" id="met-s" style="animation-delay:.3s">0</div><span class="lab">Seg</span></div>
+      </div>
+    </div>
+    <div class="card counter small reveal">
+      <h2 data-type data-scroll>Somos una parejita desde</h2>
+      <div class="num months"><b id="date-mo">0</b><span class="lab" id="date-mo-label">Meses</span></div>
+      <p class="nextlabel">Faltan para el próximo mes:</p>
+      <div class="grid4">
+        <div><div class="num" id="date-d">0</div><span class="lab">Días</span></div>
+        <div><div class="num" id="date-h" style="animation-delay:.1s">0</div><span class="lab">Horas</span></div>
+        <div><div class="num" id="date-m" style="animation-delay:.2s">0</div><span class="lab">Min</span></div>
+        <div><div class="num" id="date-s" style="animation-delay:.3s">0</div><span class="lab">Seg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2 class="script" data-type data-scroll>Mi princesa</h2>
+    <div class="reveal">
+      <div class="frame" id="frame"><div class="ph"><img id="slide" alt="Recuerdo de amor" draggable="false"></div><div class="count" id="count"></div></div>
+      <div class="controls">
+        <button id="prev" aria-label="Foto anterior">‹</button>
+        <div class="dots" id="dots"></div>
+        <button id="next" aria-label="Foto siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card closing reveal">
+      <p class="script" data-type data-scroll data-speed="80">Te elijo hoy y siempre ✨</p>
+      <div class="letter">
+        <p data-type data-scroll data-speed="28">Hola, mi amorcito. Me dieron ganas de hacerte una cartita. Los días pasan rápido y no quiero dejar de decirte lo mucho que sos para mí.</p>
+        <p data-type data-scroll data-speed="28">Ya llevamos un año y casi dos meses conociéndonos y construyendo algo hermoso. Cada día que paso con vos en esta relación me hace pensar en lo lindo que es y en lo afortunado que soy. Quería decirte lo feliz que soy con vos, lo mucho que te amo y las cosas lindas que me imagino viviendo a tu lado.</p>
+        <p data-type data-scroll data-speed="28">Me imagino a futuro con vos, compartiendo miles de momentos juntos: creciendo, viajando, riéndonos y acompañándote en todos tus sueños, mi amor.</p>
+        <p data-type data-scroll data-speed="28">Espero que sigamos juntos por siempre y para siempre, mi corazoncito. Nunca olvides lo mucho que te amo y que siempre voy a estar con vos, en las buenas y en las malas, sin importar lo que pase.</p>
+        <p data-type data-scroll data-speed="28">Te amo, mi princesa.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- MÁQUINA DE ESCRIBIR ---------- */
+function prepare(el){
+  const full = el.textContent.trim();
+  el.dataset.full = full; el.textContent = '';
+  const on = document.createElement('span'); on.className = 'on';
+  const off = document.createElement('span'); off.className = 'off'; off.textContent = full;
+  el.append(on, off);
+}
+function typeEl(el){
+  return new Promise(done => {
+    if(el.dataset.typed) return done();
+    el.dataset.typed = '1';
+    const full = el.dataset.full, on = el.firstChild, off = el.lastChild, speed = +el.dataset.speed || 45;
+    if(reduce){ on.textContent = full; off.textContent = ''; return done(); }
+    let i = 0; el.classList.add('typing');
+    (function step(){
+      i++; on.textContent = full.slice(0,i); off.textContent = full.slice(i);
+      if(i < full.length) setTimeout(step, speed + (/[,.]/.test(full[i-1]) ? 260 : 0) + Math.random()*20);
+      else { el.classList.remove('typing'); done(); }
+    })();
+  });
+}
+document.querySelectorAll('[data-type]').forEach(prepare);
+
+/* aparición al deslizar + escritura al llegar */
+(function(){
+  const rev = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); }
+  }), { threshold: .15, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => rev.observe(el));
+  const ty = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ ty.unobserve(e.target); typeEl(e.target); }
+  }), { threshold: .3 });
+  document.querySelectorAll('[data-scroll]').forEach(el => ty.observe(el));
+})();
+
+/* ---------- MÚSICA ---------- */
+const song = $('#song'), mt = $('#mt'), mi = $('#mi'), btn = $('#music');
+const ICON = {
+  play:'<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',
+  pause:'<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>'
+};
+function ui(p){ mi.innerHTML = p ? ICON.pause : ICON.play; mt.textContent = p ? 'Pausar' : 'Dale play'; btn.classList.toggle('wait', !p); }
+song.addEventListener('play', () => ui(true));
+song.addEventListener('pause', () => ui(false));
+ui(false);
+let userPaused = false, unlocked = false, wasPlaying = false;
+btn.addEventListener('click', () => {
+  if(song.paused){ userPaused = false; unlocked = true; song.volume = 1; song.play().catch(()=>{}); }
+  else { userPaused = true; song.pause(); }
+});
+song.querySelector('source').addEventListener('error', () => {
+  mt.textContent = 'Falta my_kind_of_woman.mp3'; console.error('No se encontró my_kind_of_woman.mp3');
+});
+function fadeIn(){ let v = 0; const f = setInterval(() => { v = Math.min(1, v + .05); song.volume = v; if(v >= 1) clearInterval(f); }, 120); }
+const unlockEvents = ['pointerdown','touchend','click','keydown'];
+function onGesture(e){ if(e.target.closest && e.target.closest('#music')) return; tryPlay(); }
+function removeUnlock(){ unlockEvents.forEach(ev => removeEventListener(ev, onGesture, true)); }
+function tryPlay(){
+  if(unlocked || userPaused) return;
+  song.volume = 0;
+  song.play().then(() => { unlocked = true; fadeIn(); removeUnlock(); }).catch(() => {});
+}
+unlockEvents.forEach(ev => addEventListener(ev, onGesture, true));
+tryPlay();
+// pausa al cambiar de app y reanuda al volver
+document.addEventListener('visibilitychange', () => {
+  if(document.hidden){ wasPlaying = !song.paused; song.pause(); }
+  else if(wasPlaying && !userPaused){ song.play().catch(()=>{}); }
+});
+
+/* ---------- INTRO (espera a que carguen las tipografías) ---------- */
+const fontsLoaded = (async () => {
+  try{ await Promise.race([Promise.all([
+    document.fonts.load('1em "Great Vibes"'),
+    document.fonts.load('500 1em "Cormorant Garamond"'),
+    document.fonts.load('italic 500 1em "Cormorant Garamond"')
+  ]), sleep(2000)]); }catch(e){}
+})();
+(async function intro(){
+  await fontsLoaded; await sleep(reduce ? 0 : 500);
+  const [t, p] = document.querySelectorAll('.hero [data-type]');
+  await typeEl(t); $('#hh').classList.add('show');
+  await typeEl(p); $('#hint').classList.add('show');
+})();
+
+/* ---------- GALERÍA ---------- */
+const files = [
+  'Captura de pantalla 2026-11-01 220333.png',
+  'WhatsApp Image 2026-11-01 at 9.44.00 PM.jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.01 PM.jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.01 PM (1).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.01 PM (2).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.01 PM (3).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.02 PM (1).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.02 PM (3).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.02 PM.jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.03 PM (1).jpeg',
+  'WhatsApp Image 2026-11-01 at 9.44.03 PM.jpeg'
+];
+const fallback = 'https://placehold.co/600x750/4a1555/ffd66b?text=Amor';
+const src = i => './imagenes/' + encodeURIComponent(files[i]);
+const slide = $('#slide'), dots = $('#dots'), frameEl = $('#frame');
+let idx = 0, auto, token = 0, galleryVisible = false;
+
+files.forEach((_, i) => {
+  const d = document.createElement('i');
+  d.onclick = () => { go(i, i > idx ? 1 : -1); restart(); };
+  dots.appendChild(d);
+});
+function go(i, dir = 1){
+  const n = files.length; idx = (i % n + n) % n;
+  const my = ++token;
+  [...dots.children].forEach((d, k) => d.classList.toggle('on', k === idx));
+  $('#count').textContent = (idx + 1) + ' / ' + n;
+  slide.style.opacity = 0; slide.style.transform = `translateX(${-dir * 28}px)`;
+  setTimeout(() => { if(my !== token) return; slide.dataset.fb = ''; slide.dataset.dir = dir; slide.src = src(idx); }, reduce ? 0 : 340);
+  new Image().src = src((idx + 1) % n);
+}
+slide.onload = () => {
+  const d = +slide.dataset.dir || 1;
+  slide.style.transition = 'none'; slide.style.transform = `translateX(${d * 28}px)`;
+  void slide.offsetWidth;
+  slide.style.transition = ''; slide.style.opacity = 1; slide.style.transform = 'none';
+};
+slide.onerror = () => { if(!slide.dataset.fb){ slide.dataset.fb = '1'; slide.src = fallback; } };
+function restart(){ clearInterval(auto); auto = setInterval(() => { if(galleryVisible && !document.hidden) go(idx + 1); }, 6000); }
+$('#next').onclick = () => { go(idx + 1, 1); restart(); };
+$('#prev').onclick = () => { go(idx - 1, -1); restart(); };
+addEventListener('keydown', e => {
+  if(e.key === 'ArrowRight'){ go(idx + 1, 1); restart(); }
+  if(e.key === 'ArrowLeft'){ go(idx - 1, -1); restart(); }
+});
+new IntersectionObserver(es => { galleryVisible = es[0].isIntersecting; }, { threshold: .25 }).observe($('#gallery'));
+
+// deslizar con el dedo: la foto acompaña el movimiento
+let sx = 0, sy = 0, dx = 0, drag = false;
+frameEl.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; dx = 0; drag = true; clearInterval(auto); }, { passive: true });
+frameEl.addEventListener('touchmove', e => {
+  if(!drag) return;
+  dx = e.touches[0].clientX - sx;
+  if(Math.abs(e.touches[0].clientY - sy) > Math.abs(dx)){ drag = false; slide.style.transition = ''; slide.style.transform = 'none'; return; }
+  slide.style.transition = 'none'; slide.style.transform = `translateX(${dx * .55}px)`;
+}, { passive: true });
+function endDrag(){
+  slide.style.transition = '';
+  if(drag && Math.abs(dx) > 45) go(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+  else slide.style.transform = 'none';
+  drag = false; restart();
+}
+frameEl.addEventListener('touchend', endDrag, { passive: true });
+frameEl.addEventListener('touchcancel', endDrag, { passive: true });
+go(0); restart();
+
+/* ---------- CONTADORES ---------- */
+const dateMet = new Date('2025-09-06T00:00:00');
+const dateDating = new Date('2026-09-20T00:00:00');
+const set = (id, v) => { document.getElementById(id).textContent = v; };
+const parts = ms => [Math.floor(ms/864e5), Math.floor(ms/36e5)%24, Math.floor(ms/6e4)%60, Math.floor(ms/1e3)%60];
+function updateCounters(){
+  const now = new Date();
+  const [md, mh, mm, ms] = parts(now - dateMet);
+  set('met-d', md); set('met-h', mh); set('met-m', mm); set('met-s', ms);
+  let months = (now.getFullYear() - dateDating.getFullYear()) * 12 + (now.getMonth() - dateDating.getMonth());
+  if(now.getDate() < dateDating.getDate() || (now.getDate() === dateDating.getDate() && now.getHours() < dateDating.getHours())) months--;
+  months = Math.max(0, months);
+  set('date-mo', months); set('date-mo-label', months === 1 ? 'Mes' : 'Meses');
+  const next = new Date(now.getFullYear(), now.getMonth(), 20);
+  if(now >= next) next.setMonth(next.getMonth() + 1);
+  const [d, h, m, s] = parts(next - now);
+  set('date-d', d); set('date-h', h); set('date-m', m); set('date-s', s);
+}
+setInterval(updateCounters, 1000); updateCounters();
+
+/* ---------- FONDO: atardecer que avanza al deslizar ---------- */
+const cv = $('#bg'), ctx = cv.getContext('2d');
+let W, H, DPR, cx, cy, sky, land, rw = 0, rh = 0, rt;
+let stars = [], hearts = [], comets = [], nextComet = 0, sp = 0, spT = 0;
+
+function mk(){ const c = document.createElement('canvas'); c.width = W * DPR; c.height = H * DPR; const g = c.getContext('2d'); g.scale(DPR, DPR); return { c, g }; }
+function drawCat(g, x, y, s, f){
+  g.save(); g.translate(x, y); g.scale(s * f, s);
+  g.fillStyle = '#100615';
+  g.beginPath(); g.ellipse(0,-18,13,21,0,0,Math.PI*2); g.fill();
+  g.beginPath(); g.moveTo(-10,-46); g.lineTo(-13,-61); g.quadraticCurveTo(-13,-64,-10,-61); g.lineTo(-3,-54);
+  g.quadraticCurveTo(1,-56,5,-53); g.lineTo(12,-62); g.quadraticCurveTo(15,-64,14,-60); g.lineTo(11,-45);
+  g.quadraticCurveTo(11,-34,0,-34); g.quadraticCurveTo(-11,-34,-10,-46); g.fill();
+  g.strokeStyle = '#100615'; g.lineWidth = 5; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(-9,-5); g.bezierCurveTo(-27,-3,-29,-22,-21,-25); g.stroke();
+  g.strokeStyle = 'rgba(255,184,107,.42)'; g.lineWidth = 1.4;
+  g.beginPath(); g.moveTo(-9,-43); g.quadraticCurveTo(-7,-52,-3,-53); g.moveTo(7,-53); g.lineTo(12,-59); g.stroke();
+  g.fillStyle = 'rgba(255,214,107,.8)'; g.beginPath(); g.arc(7,-46,1.1,0,Math.PI*2); g.fill();
+  g.restore();
+}
+function build(){
+  DPR = Math.min(devicePixelRatio || 1, 2);
+  W = cv.clientWidth; H = cv.clientHeight; rw = W; rh = H;
+  cv.width = W * DPR; cv.height = H * DPR;
+  cx = W * .5; cy = H - (W < 768 ? 110 : 120);
+
+  let L = mk(), g = L.g; sky = L.c;
+  const sg = g.createLinearGradient(0,0,0,H);
+  [[0,'#1d0b33'],[.25,'#4a1555'],[.5,'#a3284a'],[.7,'#e5593a'],[.88,'#fb9b3a'],[1,'#ffd66b']].forEach(([p,c]) => sg.addColorStop(p,c));
+  g.fillStyle = sg; g.fillRect(0,0,W,H);
+
+  L = mk(); g = L.g; land = L.c;
+  const far = g.createLinearGradient(0,H-300,0,H); far.addColorStop(0,'#612447'); far.addColorStop(1,'#32112f');
+  g.fillStyle = far; g.beginPath(); g.moveTo(0,H); g.lineTo(0,H-150);
+  g.quadraticCurveTo(W*.3,H-300,W*.7,H-150); g.quadraticCurveTo(W*.9,H-100,W,H-250); g.lineTo(W,H); g.fill();
+  g.strokeStyle = 'rgba(255,184,107,.24)'; g.lineWidth = 2;
+  g.beginPath(); g.moveTo(0,H-150); g.quadraticCurveTo(W*.3,H-300,W*.7,H-150); g.quadraticCurveTo(W*.9,H-100,W,H-250); g.stroke();
+  const near = g.createLinearGradient(0,H-130,0,H); near.addColorStop(0,'#281022'); near.addColorStop(1,'#100711');
+  g.fillStyle = near; g.beginPath(); g.moveTo(0,H); g.lineTo(0,H-50);
+  g.quadraticCurveTo(W*.2,H-100,W*.5,H-120); g.quadraticCurveTo(W*.8,H-130,W,H-80); g.lineTo(W,H); g.fill();
+  const gr = g.createRadialGradient(cx,cy,3,cx,cy,60); gr.addColorStop(0,'rgba(8,2,14,.62)'); gr.addColorStop(1,'rgba(8,2,14,0)');
+  g.fillStyle = gr; g.beginPath(); g.ellipse(cx,cy,60,12,0,0,Math.PI*2); g.fill();
+  drawCat(g, cx - 24, cy, .9, 1); drawCat(g, cx + 24, cy + 2, .82, -1);
+
+  stars = Array.from({length:130}, (_, i) => ({
+    x:Math.random()*W, y:Math.random()*H*.55, large:i < 9,
+    r:i < 9 ? Math.random()*1.5+1.8 : Math.random()*1.1+.2, a:Math.random()*.7, f:Math.random()*.02+.004
+  }));
+}
+function heart(x, y, s, a){
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.globalAlpha = a; ctx.fillStyle = '#ff7a9c';
+  ctx.beginPath(); ctx.moveTo(0,0);
+  ctx.bezierCurveTo(0,-3,-5,-15,-15,-15); ctx.bezierCurveTo(-25,-15,-25,-2.5,-25,-2.5);
+  ctx.bezierCurveTo(-25,9,-5,21,0,30); ctx.bezierCurveTo(5,21,25,9,25,-2.5);
+  ctx.bezierCurveTo(25,-2.5,25,-15,15,-15); ctx.bezierCurveTo(5,-15,0,-3,0,0);
+  ctx.fill(); ctx.restore();
+}
+function onScroll(){ const m = document.documentElement.scrollHeight - innerHeight; spT = m > 0 ? Math.min(1, Math.max(0, scrollY / m)) : 0; }
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+addEventListener('resize', () => {
+  clearTimeout(rt);
+  rt = setTimeout(() => { if(Math.abs(cv.clientWidth - rw) > 1 || Math.abs(cv.clientHeight - rh) > 120) build(); }, 150);
+});
+
+function frame(t){
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  sp += (spT - sp) * .06;
+  ctx.drawImage(sky, 0, 0, W, H);
+
+  // las estrellas brillan más a medida que baja el sol
+  ctx.fillStyle = '#fff';
+  const boost = 1 + sp * .9;
+  stars.forEach(s => {
+    s.a += s.f; if(s.a > .7 || s.a < 0) s.f *= -1;
+    const a = Math.min(1, Math.max(0, s.a) * boost);
+    ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2); ctx.fill();
+    if(s.large){
+      ctx.globalAlpha = a * .45; ctx.strokeStyle = '#fff3d6'; ctx.lineWidth = .7;
+      ctx.beginPath(); ctx.moveTo(s.x - s.r*2.2, s.y); ctx.lineTo(s.x + s.r*2.2, s.y);
+      ctx.moveTo(s.x, s.y - s.r*2.2); ctx.lineTo(s.x, s.y + s.r*2.2); ctx.stroke();
+    }
+  });
+  ctx.globalAlpha = 1;
+
+  if(!reduce && t >= nextComet){
+    const n = 2 + Math.floor(Math.random()*2);
+    for(let k = 0; k < n && comets.length < 6; k++) comets.push({
+      x:W*(.15 + Math.random()*.9), y:H*(.03 + Math.random()*.32),
+      vx:-3 - Math.random()*4, vy:1 + Math.random()*2.5, len:40 + Math.random()*75, life:0, max:75 + Math.random()*55
+    });
+    nextComet = t + 800 + Math.random()*900;
+  }
+  for(let i = comets.length - 1; i >= 0; i--){
+    const c = comets[i]; c.x += c.vx; c.y += c.vy; c.life++;
+    const o = Math.max(0, Math.sin(Math.PI * c.life / c.max));
+    const tx = c.x - c.vx * c.len / 8, ty = c.y - c.vy * c.len / 8;
+    const tr = ctx.createLinearGradient(c.x, c.y, tx, ty);
+    tr.addColorStop(0, `rgba(255,243,214,${o})`); tr.addColorStop(1, 'rgba(255,184,107,0)');
+    ctx.strokeStyle = tr; ctx.lineWidth = 2; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(c.x, c.y); ctx.lineTo(tx, ty); ctx.stroke();
+    if(c.life >= c.max) comets.splice(i, 1);
+  }
+
+  // el sol baja hacia las colinas al deslizar
+  const sx = W*.5, sy = H*(.46 + sp*.2), pulse = 1 + Math.sin(t/1800)*.045;
+  let halo = ctx.createRadialGradient(sx, sy, 20, sx, sy, 190*pulse);
+  halo.addColorStop(0,'rgba(255,243,214,.36)'); halo.addColorStop(.35,'rgba(255,184,107,.2)'); halo.addColorStop(1,'rgba(255,122,82,0)');
+  ctx.fillStyle = halo; ctx.fillRect(sx - 200, sy - 200, 400, 400);
+  const sun = ctx.createRadialGradient(sx - 22, sy - 25, 5, sx, sy, 76*pulse);
+  sun.addColorStop(0,'#fffdf0'); sun.addColorStop(.62,'#fff1cf'); sun.addColorStop(1,'#ffb86b');
+  ctx.fillStyle = sun; ctx.beginPath(); ctx.arc(sx, sy, 60*pulse, 0, Math.PI*2); ctx.fill();
+
+  ctx.drawImage(land, 0, 0, W, H);
+  ctx.fillStyle = `rgba(20,5,40,${sp * .36})`; ctx.fillRect(0, 0, W, H);
+
+  if(!reduce && Math.random() < .04) hearts.push({x:cx + Math.random()*40 - 20, y:cy - 40, s:Math.random()*.2 + .15, vy:Math.random()*1.5 + .5, vx:(Math.random() - .5)*.5, a:1});
+  for(let i = hearts.length - 1; i >= 0; i--){
+    const h = hearts[i]; h.y -= h.vy; h.x += h.vx; h.a -= .003;
+    if(h.a <= 0) hearts.splice(i, 1); else heart(h.x, h.y, h.s, h.a);
+  }
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(frame);
+}
+build(); requestAnimationFrame(frame);
+</script>
+</body>
+</html>
